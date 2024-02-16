@@ -1,0 +1,114 @@
+p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.addproperty {
+  padding: 5% 10%;
+}
+
+@media (max-width: 500px) {
+  .addproperty {
+    padding: 5% 5%;
+  }
+}
+
+.addproperty .info h2 {
+  font-size: 2.2rem;
+}
+
+@media (max-width: 500px) {
+  .addproperty .info h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.addproperty .info p {
+  margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+  .addproperty .info p {
+    font-size: 0.9rem;
+  }
+}
+
+.addproperty .info form {
+  margin-top: 2rem;
+  max-width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.addproperty .info form input,
+.addproperty .info form textarea {
+  padding: 1rem;
+  outline: none;
+  border: solid 1px #e3e3e3;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+  .addproperty .info form input,
+  .addproperty .info form textarea {
+    font-size: 0.8rem;
+  }
+}
+
+.addproperty .info form textarea {
+  height: 8rem;
+}
+
+.addproperty .info form button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 1rem 2rem;
+  background-color: #3492ff;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 500px) {
+  .addproperty .info form button {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+.addproperty .info form button:hover {
+  background-color: black;
+}
+/*# sourceMappingURL=AddProperty.css.map */

@@ -1,0 +1,302 @@
+p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.navbar-wrapper {
+  background-color: white;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.navbar-wrapper.scroll {
+  background-color: rgba(0, 0, 0, 0.482);
+  padding: 0;
+}
+
+.navbar-wrapper .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0rem 3rem;
+}
+
+@media (max-width: 1000px) {
+  .navbar-wrapper .navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0rem 1rem;
+  }
+}
+
+.navbar-wrapper .navbar .logo {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.navbar-wrapper .navbar .logo a {
+  text-align: center;
+}
+
+.navbar-wrapper .navbar .logo a h3 {
+  font-size: 2rem;
+}
+
+.navbar-wrapper .navbar .logo a p {
+  color: black;
+  margin-top: -10px;
+}
+
+.navbar-wrapper .navbar .lists .list {
+  margin-right: 4rem;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .navbar-wrapper .navbar .lists .list {
+    display: none;
+  }
+}
+
+.navbar-wrapper .navbar .lists .list li .link {
+  color: black;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.navbar-wrapper .navbar .lists .list li .link .sublinks {
+  border-top: 2px solid #3492ff;
+  background-color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: black;
+  -webkit-box-shadow: 0px 0px 40px -20px black;
+          box-shadow: 0px 0px 40px -20px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 100%;
+  z-index: 11;
+  list-style-type: none;
+  visibility: hidden;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 0 0 0;
+          transform-origin: 0 0 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navbar-wrapper .navbar .lists .list li .link .sublinks li {
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  border-bottom: solid 1px #e9e9e9;
+}
+
+.navbar-wrapper .navbar .lists .list li .link .sublinks li:hover {
+  background-color: #3492ff;
+  color: white;
+}
+
+.navbar-wrapper .navbar .lists .list li .link .sublinks.active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-wrapper .navbar .lists .list li .link:hover {
+  color: #3492ff;
+}
+
+.navbar-wrapper .navbar .lists .list li .link.active {
+  color: #3492ff;
+}
+
+.navbar-wrapper .navbar .lists .list.home li .link {
+  color: black;
+}
+
+.navbar-wrapper .navbar .lists .list.home li .link:hover {
+  color: #3492ff;
+}
+
+.navbar-wrapper .navbar .lists .list.home li .link.active {
+  color: #3492ff;
+}
+
+.navbar-wrapper .navbar .lists svg {
+  color: black;
+  font-size: 2rem;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .navbar-wrapper .navbar .lists svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-wrapper .navbar .lists svg {
+    font-size: 1.5rem;
+  }
+}
+
+.nav-mob-res {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  display: none;
+  z-index: 100;
+}
+
+@media (max-width: 1000px) {
+  .nav-mob-res {
+    display: block;
+  }
+}
+
+.nav-mob-res .mob-nav {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s linear;
+  transition: max-height 0.5s linear;
+}
+
+.nav-mob-res .mob-nav.active {
+  max-height: 60rem;
+  opacity: 1;
+}
+
+.nav-mob-res .mob-nav a li {
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.nav-mob-res .mob-nav a li:hover {
+  background-color: #3492ff;
+  color: white;
+}
+
+.nav-mob-res .mob-nav a .mob-sub-list {
+  padding-left: 3rem;
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s linear;
+  transition: max-height 0.5s linear;
+}
+
+.nav-mob-res .mob-nav a .mob-sub-list.active {
+  max-height: 60rem;
+  opacity: 1;
+}
+
+.nav-mob-res .mob-nav a.active {
+  background-color: #3492ff;
+  color: white;
+}
+
+.fixedZero {
+  position: fixed;
+  color: yellow;
+  z-index: 100;
+  bottom: 3%;
+  left: 3%;
+}
+
+.fixedZero h2 {
+  font-size: 5rem;
+}
+
+@media (max-width: 500px) {
+  .fixedZero h2 {
+    font-size: 2rem;
+  }
+}
+
+.fixedZero h2 span {
+  font-size: 2.3rem;
+}
+
+@media (max-width: 500px) {
+  .fixedZero h2 span {
+    font-size: 1.5rem;
+  }
+}
+
+.fixedsche {
+  position: fixed;
+  background-color: red;
+  color: white;
+  z-index: 100;
+  bottom: 50%;
+  right: 3%;
+  padding: 0.5rem 1rem;
+}
+
+.fixedsche h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .fixedsche h2 {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

@@ -1,0 +1,124 @@
+@import "../Variable/Variable.scss";
+
+.contact-comp-wrapper {
+  padding: 5% 10%;
+  @media (max-width: 1200px) {
+    padding: 5% 3rem;
+  }
+  @media (max-width: 700px) {
+    padding: 5% 1rem;
+  }
+  .contact-comp {
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    .heading {
+      margin-bottom: 2rem;
+      width: 47%;
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        @media (max-width: 500px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $main;
+        @media (max-width: 700px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      gap: 2rem;
+      .form {
+        width: 48%;
+        background-color: white;
+        // min-height: 500px;
+        box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        border-radius: 5px;
+        padding: 3rem;
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+        @media (max-width: 700px) {
+          padding: 0rem;
+          box-shadow: none;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          input {
+            width: 100%;
+            height: 2rem;
+            padding: 1.8rem 2rem;
+            outline: none;
+            border: solid 1px #e3e3e3;
+            background-color: rgb(251, 251, 251);
+            border-radius: 5px;
+          }
+
+          textarea {
+            padding: 1.8rem 2rem;
+            outline: none;
+            border: solid 1px #e3e3e3;
+            background-color: rgb(251, 251, 251);
+            border-radius: 5px;
+            height: 8rem;
+          }
+
+          button {
+            align-self: flex-start;
+            padding: 1rem 2rem;
+            background-color: $main;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            @media (max-width: 500px) {
+              padding: 0.5rem 1rem;
+              font-size: 1rem;
+            }
+
+            &:hover {
+              background-color: black;
+            }
+          }
+        }
+      }
+
+      .maps {
+        // margin-top: -30rem;
+        width: 48%;
+        z-index: 5;
+        @media (max-width: 900px) {
+          margin-top: 2rem;
+          width: 100%;
+        }
+
+        iframe {
+          width: 100%;
+          min-height: 35rem;
+          @media (max-width: 900px) {
+            min-height: 28rem;
+          }
+        }
+      }
+    }
+  }
+}

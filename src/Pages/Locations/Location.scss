@@ -1,0 +1,108 @@
+@import "../../Common/Variable/Variable.scss";
+
+.locations {
+  padding: 5% 10%;
+  @media (max-width: 500px) {
+    padding: 5% 5%;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15rem;
+    .heading {
+      text-align: center;
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        @media (max-width: 500px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .input {
+      // max-width: 50rem;
+      width: 70%;
+      position: relative;
+      @media (max-width: 700px) {
+        width: 100%;
+      }
+
+      input {
+        outline: none;
+        font-size: 1.5rem;
+        width: 100%;
+        border: $main 2px solid;
+        padding: 0.5rem;
+        width: 100%;
+        @media (max-width: 500px) {
+          font-size: 1rem;
+        }
+      }
+
+      ul {
+        list-style: none;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        padding: 0 0.5rem;
+        height: 10rem;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        li {
+          cursor: pointer;
+          font-size: 1.2rem;
+          @media (max-width: 500px) {
+            font-size: 1rem;
+          }
+          padding: 0.2rem;
+        }
+      }
+    }
+  }
+
+  .content {
+    .heading {
+      margin-bottom: 1rem;
+      h2 {
+        font-size: 2rem;
+        @media (max-width: 500px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .loc {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .loc-box {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        &:hover {
+          color: $main;
+        }
+        svg {
+          font-size: 1.5rem;
+          @media (max-width: 500px) {
+            font-size: 1rem;
+          }
+        }
+
+        a {
+          span {
+            font-size: 1.5rem;
+            @media (max-width: 500px) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

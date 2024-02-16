@@ -1,0 +1,75 @@
+@import "../../Common/Variable/Variable.scss";
+
+.emp {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  .sidebar {
+    width: 20%;
+    border-right: 2px #eee solid;
+    height: 100%;
+
+    .heading {
+      text-align: center;
+      color: $main;
+      border-bottom: 4px solid #eee;
+      padding: 1rem 0;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .main-lists {
+      padding: 1rem;
+      .main-list {
+        margin-bottom: 1.5rem;
+        .title {
+          font-size: 0.8rem;
+          color: $para;
+          font-weight: 600;
+        }
+        .list {
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+          &:hover {
+            color: $main;
+
+            .icon {
+              background-color: $main;
+            }
+          }
+
+          &.active {
+            color: $main;
+
+            .icon {
+              background-color: $main;
+            }
+          }
+
+          .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+          }
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    padding: 2rem;
+    .heading {
+      margin-bottom: 2rem;
+    }
+  }
+}

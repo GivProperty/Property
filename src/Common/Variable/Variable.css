@@ -1,0 +1,27 @@
+p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+/*# sourceMappingURL=Variable.css.map */

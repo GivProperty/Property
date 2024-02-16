@@ -1,0 +1,238 @@
+@import "../../Common/Variable/Variable.scss";
+
+.singlePropertyWrapper {
+  padding: 5% 10%;
+  @media (max-width: 500px) {
+    padding: 5% 5%;
+  }
+
+  .singleProperty {
+    .heading {
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2.2rem;
+        @media (max-width: 500px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .main-content {
+      display: flex;
+      gap: 2rem;
+      @media (max-width: 1000px) {
+        flex-direction: column;
+      }
+      .img-container {
+        width: 65%;
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
+      }
+
+      .about-property {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 35%;
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
+        h3 {
+          font-size: 1.8rem;
+          @media (max-width: 500px) {
+            font-size: 1.5rem;
+          }
+        }
+
+        .amount {
+          color: green;
+          font-size: 1.4rem;
+          font-weight: 600;
+
+          .sm {
+            font-size: 1rem;
+          }
+        }
+
+        .visit {
+          align-self: flex-start;
+          border: none;
+          font-size: 1.2rem;
+          background-color: white;
+          color: $main;
+          cursor: pointer;
+          transition: all ease 0.5s;
+
+          //   &:hover {
+          //     background-color: $main;
+          //     color: white;
+          //     padding: 0.5rem 1rem;
+          //   }
+        }
+
+        .book {
+          align-self: flex-start;
+          border: none;
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+          background-color: $main;
+          color: white;
+          cursor: pointer;
+          transition: all ease 0.5s;
+
+          &:hover {
+            background-color: black;
+            color: white;
+          }
+        }
+
+        .book-share {
+          margin-top: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .share {
+          align-self: flex-start;
+          border: solid 2px $whatsapp;
+          border-radius: 5rem;
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+          background-color: white;
+          color: $whatsapp;
+          cursor: pointer;
+          transition: all ease 0.5s;
+
+          &:hover {
+            background-color: $whatsapp;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .amenities {
+      margin-top: 2rem;
+      .heading {
+        text-align: center;
+        h2 {
+          font-size: 2.2rem;
+          margin-bottom: 2rem;
+          @media (max-width: 500px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .content {
+        padding: 0% 20%;
+        @media (max-width: 500px) {
+          padding: 0% 5%;
+        }
+        grid-gap: 2rem;
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+
+        .am-box {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .prop-vid {
+      margin-top: 2rem;
+      .heading {
+        text-align: center;
+        h2 {
+          font-size: 2.2rem;
+          margin-bottom: 2rem;
+          @media (max-width: 500px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .content {
+        display: flex;
+        gap: 3rem;
+        width: 100%;
+        @media (max-width: 800px) {
+          flex-direction: column;
+        }
+        .video {
+          width: 50%;
+          @media (max-width: 800px) {
+            width: 100%;
+          }
+
+          iframe {
+            width: 100%;
+            height: 25rem;
+            @media (max-width: 500px) {
+              height: 18rem;
+            }
+          }
+        }
+        .maps {
+          width: 50%;
+          @media (max-width: 800px) {
+            width: 100%;
+          }
+          iframe {
+            width: 100%;
+            height: 25rem;
+            @media (max-width: 500px) {
+              height: 18rem;
+            }
+          }
+        }
+      }
+    }
+
+    .similar {
+      margin-top: 2rem;
+      .heading {
+        text-align: center;
+        h2 {
+          font-size: 2.2rem;
+          margin-bottom: 2rem;
+          @media (max-width: 500px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .container {
+        grid-gap: 2rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+        .box {
+          border: 2px solid #eee;
+          padding: 2rem;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          gap: 1rem;
+
+          a {
+            border: $main 2px solid;
+            width: 100%;
+            font-size: 1.5rem;
+
+            &:hover {
+              background-color: $main;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

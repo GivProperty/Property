@@ -1,0 +1,192 @@
+p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.singleLocationWrapper {
+  padding: 5% 10%;
+}
+
+@media (max-width: 500px) {
+  .singleLocationWrapper {
+    padding: 5% 5%;
+  }
+}
+
+.singleLocationWrapper .singleLocation .heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.singleLocationWrapper .singleLocation .heading h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .singleLocationWrapper .singleLocation .heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.singleLocationWrapper .singleLocation .properties-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box {
+  border: solid 3px #eee;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 1000px) {
+  .singleLocationWrapper .singleLocation .properties-container .property-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+  }
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-img img {
+  width: 20rem;
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-img a {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: solid 3px #3492ff;
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-img a:hover {
+  color: white;
+  background-color: #3492ff;
+  font-weight: 400;
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-info {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  gap: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .singleLocationWrapper .singleLocation .properties-container .property-box .property-info .address {
+    font-size: 1rem;
+  }
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-info .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 3px #eee;
+  padding: 0rem 2rem;
+}
+
+@media (max-width: 500px) {
+  .singleLocationWrapper .singleLocation .properties-container .property-box .property-info .icons {
+    border: none;
+    gap: 0.5rem;
+  }
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-info .icons .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-info .icons .icon svg {
+  font-size: 2rem;
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-info .icons .icon p {
+  font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+  .singleLocationWrapper .singleLocation .properties-container .property-box .property-info .icons .icon p {
+    font-size: 0.8rem;
+  }
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-info .amount {
+  color: green;
+  font-size: 1rem;
+}
+
+.singleLocationWrapper .singleLocation .properties-container .property-box .property-info .amount .value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+/*# sourceMappingURL=SingleLocation.css.map */

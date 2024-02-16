@@ -1,0 +1,356 @@
+p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.singlePropertyWrapper {
+  padding: 5% 10%;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper {
+    padding: 5% 5%;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .heading h2 {
+  font-size: 2rem;
+  margin-bottom: 2.2rem;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .singlePropertyWrapper .singleProperty .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .main-content .img-container {
+  width: 65%;
+}
+
+@media (max-width: 1000px) {
+  .singlePropertyWrapper .singleProperty .main-content .img-container {
+    width: 100%;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  width: 35%;
+}
+
+@media (max-width: 1000px) {
+  .singlePropertyWrapper .singleProperty .main-content .about-property {
+    width: 100%;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property h3 {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .main-content .about-property h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property .amount {
+  color: green;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property .amount .sm {
+  font-size: 1rem;
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property .visit {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border: none;
+  font-size: 1.2rem;
+  background-color: white;
+  color: #3492ff;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property .book {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: #3492ff;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property .book:hover {
+  background-color: black;
+  color: white;
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property .book-share {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property .share {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border: solid 2px #25d365;
+  border-radius: 5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #25d365;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.singlePropertyWrapper .singleProperty .main-content .about-property .share:hover {
+  background-color: #25d365;
+  color: white;
+}
+
+.singlePropertyWrapper .singleProperty .amenities {
+  margin-top: 2rem;
+}
+
+.singlePropertyWrapper .singleProperty .amenities .heading {
+  text-align: center;
+}
+
+.singlePropertyWrapper .singleProperty .amenities .heading h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .amenities .heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .amenities .content {
+  padding: 0% 20%;
+  grid-gap: 2rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 5rem;
+  -ms-grid-columns: (minmax(3rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .amenities .content {
+    padding: 0% 5%;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .amenities .content .am-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.singlePropertyWrapper .singleProperty .prop-vid {
+  margin-top: 2rem;
+}
+
+.singlePropertyWrapper .singleProperty .prop-vid .heading {
+  text-align: center;
+}
+
+.singlePropertyWrapper .singleProperty .prop-vid .heading h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .prop-vid .heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .prop-vid .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .singlePropertyWrapper .singleProperty .prop-vid .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .prop-vid .content .video {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .singlePropertyWrapper .singleProperty .prop-vid .content .video {
+    width: 100%;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .prop-vid .content .video iframe {
+  width: 100%;
+  height: 25rem;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .prop-vid .content .video iframe {
+    height: 18rem;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .prop-vid .content .maps {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .singlePropertyWrapper .singleProperty .prop-vid .content .maps {
+    width: 100%;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .prop-vid .content .maps iframe {
+  width: 100%;
+  height: 25rem;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .prop-vid .content .maps iframe {
+    height: 18rem;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .similar {
+  margin-top: 2rem;
+}
+
+.singlePropertyWrapper .singleProperty .similar .heading {
+  text-align: center;
+}
+
+.singlePropertyWrapper .singleProperty .similar .heading h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .similar .heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .similar .container {
+  grid-gap: 2rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.singlePropertyWrapper .singleProperty .similar .container .box {
+  border: 2px solid #eee;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.singlePropertyWrapper .singleProperty .similar .container .box a {
+  border: #3492ff 2px solid;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.singlePropertyWrapper .singleProperty .similar .container .box a:hover {
+  background-color: #3492ff;
+  color: white;
+}
+/*# sourceMappingURL=SingleProperty.css.map */

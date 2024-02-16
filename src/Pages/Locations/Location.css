@@ -1,0 +1,177 @@
+p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.locations {
+  padding: 5% 10%;
+}
+
+@media (max-width: 500px) {
+  .locations {
+    padding: 5% 5%;
+  }
+}
+
+.locations .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15rem;
+}
+
+.locations .search .heading {
+  text-align: center;
+}
+
+.locations .search .heading h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+  .locations .search .heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.locations .search .input {
+  width: 70%;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  .locations .search .input {
+    width: 100%;
+  }
+}
+
+.locations .search .input input {
+  outline: none;
+  font-size: 1.5rem;
+  width: 100%;
+  border: #3492ff 2px solid;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .locations .search .input input {
+    font-size: 1rem;
+  }
+}
+
+.locations .search .input ul {
+  list-style: none;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  padding: 0 0.5rem;
+  height: 10rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.locations .search .input ul li {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+}
+
+@media (max-width: 500px) {
+  .locations .search .input ul li {
+    font-size: 1rem;
+  }
+}
+
+.locations .content .heading {
+  margin-bottom: 1rem;
+}
+
+.locations .content .heading h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .locations .content .heading h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.locations .content .loc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.locations .content .loc .loc-box {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.locations .content .loc .loc-box:hover {
+  color: #3492ff;
+}
+
+.locations .content .loc .loc-box svg {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .locations .content .loc .loc-box svg {
+    font-size: 1rem;
+  }
+}
+
+.locations .content .loc .loc-box a span {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .locations .content .loc .loc-box a span {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=Location.css.map */

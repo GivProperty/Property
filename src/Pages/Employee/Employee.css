@@ -1,0 +1,121 @@
+p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.emp {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emp .sidebar {
+  width: 20%;
+  border-right: 2px #eee solid;
+  height: 100%;
+}
+
+.emp .sidebar .heading {
+  text-align: center;
+  color: #3492ff;
+  border-bottom: 4px solid #eee;
+  padding: 1rem 0;
+}
+
+.emp .sidebar .heading h2 {
+  font-size: 1.5rem;
+}
+
+.emp .sidebar .main-lists {
+  padding: 1rem;
+}
+
+.emp .sidebar .main-lists .main-list {
+  margin-bottom: 1.5rem;
+}
+
+.emp .sidebar .main-lists .main-list .title {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.emp .sidebar .main-lists .main-list .list {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.emp .sidebar .main-lists .main-list .list:hover {
+  color: #3492ff;
+}
+
+.emp .sidebar .main-lists .main-list .list:hover .icon {
+  background-color: #3492ff;
+}
+
+.emp .sidebar .main-lists .main-list .list.active {
+  color: #3492ff;
+}
+
+.emp .sidebar .main-lists .main-list .list.active .icon {
+  background-color: #3492ff;
+}
+
+.emp .sidebar .main-lists .main-list .list .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+.emp .sidebar .main-lists .main-list .list p {
+  color: white;
+}
+
+.emp .main {
+  padding: 2rem;
+}
+
+.emp .main .heading {
+  margin-bottom: 2rem;
+}
+/*# sourceMappingURL=Employee.css.map */

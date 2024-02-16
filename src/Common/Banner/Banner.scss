@@ -1,0 +1,121 @@
+@import "../Variable/Variable.scss";
+
+.banner-wrapper {
+  position: relative;
+  .banner {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20rem;
+    z-index: 10;
+    // position: relative;
+
+    .content {
+      h2 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        z-index: 10;
+        @media (max-width: 500px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      .buttons {
+        text-align: center;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        z-index: 10;
+
+        a {
+          color: white;
+          font-size: 1rem;
+          background-color: $main;
+          padding: 0.5rem;
+          transition: all 0.5s ease;
+          z-index: 10;
+
+          &:hover {
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+  .rotateme,
+  .blue,
+  .orange {
+    width: 1.5rem;
+    position: absolute;
+    z-index: 1;
+    &.one {
+      top: 25%;
+      left: 30%;
+    }
+    &.o {
+      top: 25%;
+      right: 30%;
+    }
+
+    &.b {
+      top: 60%;
+      left: 40%;
+    }
+  }
+}
+
+@keyframes contactSwimmer {
+  0%,
+  100% {
+    -webkit-transform: translateX(0) translateY(0) rotate(0);
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+  25%,
+  75% {
+    -webkit-transform: translateX(15px) translateY(20px) rotate(10deg);
+    transform: translateX(15px) translateY(20px) rotate(10deg);
+  }
+  50% {
+    -webkit-transform: translateX(60px) translateY(35px) rotate(15deg);
+    transform: translateX(60px) translateY(35px) rotate(15deg);
+  }
+}
+.rotateme {
+  -webkit-animation-name: contactSwimmer;
+  animation-name: contactSwimmer;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@keyframes animationFramesOne {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    transform: translate(73px, -1px) rotate(36deg);
+  }
+  40% {
+    transform: translate(141px, 72px) rotate(72deg);
+  }
+  60% {
+    transform: translate(83px, 122px) rotate(108deg);
+  }
+  80% {
+    transform: translate(-40px, 72px) rotate(144deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+.blue,
+.orange {
+  animation: animationFramesOne 12s linear infinite;
+}
