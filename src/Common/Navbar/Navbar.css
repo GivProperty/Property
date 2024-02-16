@@ -101,7 +101,7 @@ img {
 }
 
 .navbar-wrapper .navbar .lists .list li .link .sublinks {
-  border-top: 2px solid #3492ff;
+  border-top: 2px solid #f1ec40;
   background-color: white;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -138,7 +138,7 @@ img {
 }
 
 .navbar-wrapper .navbar .lists .list li .link .sublinks li:hover {
-  background-color: #3492ff;
+  background-color: #f1ec40;
   color: white;
 }
 
@@ -150,11 +150,11 @@ img {
 }
 
 .navbar-wrapper .navbar .lists .list li .link:hover {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .navbar-wrapper .navbar .lists .list li .link.active {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .navbar-wrapper .navbar .lists .list.home li .link {
@@ -162,11 +162,11 @@ img {
 }
 
 .navbar-wrapper .navbar .lists .list.home li .link:hover {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .navbar-wrapper .navbar .lists .list.home li .link.active {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .navbar-wrapper .navbar .lists svg {
@@ -229,7 +229,7 @@ img {
 }
 
 .nav-mob-res .mob-nav a li:hover {
-  background-color: #3492ff;
+  background-color: #f1ec40;
   color: white;
 }
 
@@ -248,7 +248,7 @@ img {
 }
 
 .nav-mob-res .mob-nav a.active {
-  background-color: #3492ff;
+  background-color: #f1ec40;
   color: white;
 }
 

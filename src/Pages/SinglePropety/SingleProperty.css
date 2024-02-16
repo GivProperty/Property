@@ -116,7 +116,7 @@ img {
   border: none;
   font-size: 1.2rem;
   background-color: white;
-  color: #3492ff;
+  color: #f1ec40;
   cursor: pointer;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -128,7 +128,7 @@ img {
   border: none;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
-  background-color: #3492ff;
+  background-color: #f1ec40;
   color: white;
   cursor: pointer;
   -webkit-transition: all ease 0.5s;
@@ -344,13 +344,13 @@ img {
 }
 
 .singlePropertyWrapper .singleProperty .similar .container .box a {
-  border: #3492ff 2px solid;
+  border: #f1ec40 2px solid;
   width: 100%;
   font-size: 1.5rem;
 }
 
 .singlePropertyWrapper .singleProperty .similar .container .box a:hover {
-  background-color: #3492ff;
+  background-color: #f1ec40;
   color: white;
 }
 /*# sourceMappingURL=SingleProperty.css.map */

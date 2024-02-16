@@ -41,7 +41,7 @@ img {
 
 .emp .sidebar .heading {
   text-align: center;
-  color: #3492ff;
+  color: #f1ec40;
   border-bottom: 4px solid #eee;
   padding: 1rem 0;
 }
@@ -77,19 +77,19 @@ img {
 }
 
 .emp .sidebar .main-lists .main-list .list:hover {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .emp .sidebar .main-lists .main-list .list:hover .icon {
-  background-color: #3492ff;
+  background-color: #f1ec40;
 }
 
 .emp .sidebar .main-lists .main-list .list.active {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .emp .sidebar .main-lists .main-list .list.active .icon {
-  background-color: #3492ff;
+  background-color: #f1ec40;
 }
 
 .emp .sidebar .main-lists .main-list .list .icon {

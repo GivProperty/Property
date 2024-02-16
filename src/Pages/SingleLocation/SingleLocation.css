@@ -107,12 +107,12 @@ img {
   text-align: center;
   font-size: 1.4rem;
   font-weight: 600;
-  border: solid 3px #3492ff;
+  border: solid 3px #f1ec40;
 }
 
 .singleLocationWrapper .singleLocation .properties-container .property-box .property-img a:hover {
   color: white;
-  background-color: #3492ff;
+  background-color: #f1ec40;
   font-weight: 400;
 }
 

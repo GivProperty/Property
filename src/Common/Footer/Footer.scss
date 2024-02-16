@@ -1,5 +1,7 @@
+@import "../Variable/Variable.scss";
+
 .footer {
-  background-color: #1e1c1e;
+  background-color: $main;
   padding: 3% 10%;
   @media (max-width: 500px) {
     padding: 3% 5%;
@@ -20,7 +22,7 @@
       // max-width: 32%;
       width: 100%;
 
-      color: white;
+      // color: white;
 
       h3 {
         font-size: 1.5rem;
@@ -33,7 +35,7 @@
       a {
         font-size: 0.9rem;
         font-weight: 400;
-        color: rgb(224, 224, 224) !important;
+        // color: rgb(224, 224, 224) !important;
         @media (max-width: 500px) {
           font-size: 0.8rem;
         }
@@ -71,18 +73,15 @@
     }
 
     .info {
-      h3 {
-        color: white;
-      }
     }
     .icons {
       display: flex;
       gap: 0.5rem;
       svg {
-        background-color: #eee;
+        background-color: black;
         padding: 0.5rem;
         font-size: 1.2rem;
-        color: #333;
+        color: white;
         transition: all 0.4s ease;
 
         &:hover {

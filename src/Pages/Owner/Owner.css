@@ -138,8 +138,8 @@ img {
 }
 
 .main-banner-wrappe .main-banner .main-content a {
-  background-color: #3492ff;
-  color: white;
+  background-color: #f1ec40;
+  color: black;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-weight: 500;
@@ -161,7 +161,7 @@ img {
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
   background-color: white;
-  color: #3492ff;
+  color: black;
 }
 
 .aboutH {
@@ -221,7 +221,7 @@ img {
 }
 
 .aboutH .info h2 span {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .aboutH .info p {
@@ -229,7 +229,7 @@ img {
 }
 
 .aboutH .info a {
-  background-color: #3492ff;
+  background-color: #f1ec40;
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -325,6 +325,22 @@ img {
   }
 }
 
+.prepaid {
+  padding: 2% 10%;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .prepaid {
+    padding: 5% 5%;
+  }
+}
+
+.prepaid h2 {
+  background-color: black;
+  color: yellow;
+}
+
 .hwhy {
   background-image: url(../../Assests/Banners/shape-banner.png);
   background-position: center;
@@ -380,14 +396,14 @@ img {
 }
 
 .hwhy .content .box h3 {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .hwhy .content .box img {
   width: 6.5rem;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 20px -10px #3492ff;
-          box-shadow: 0px 0px 20px -10px #3492ff;
+  -webkit-box-shadow: 0px 0px 20px -10px #f1ec40;
+          box-shadow: 0px 0px 20px -10px #f1ec40;
   padding: 1rem;
 }
 
@@ -444,7 +460,7 @@ img {
 }
 
 .maintainH .info h2 span {
-  color: #3492ff;
+  color: #f1ec40;
 }
 
 .maintainH .info p {
@@ -544,7 +560,7 @@ img {
   text-align: center;
   padding: 2rem;
   border-radius: 5rem;
-  background-color: green;
+  background-color: #eee;
 }
 
 .counter .box-contain-one .box span {
@@ -553,7 +569,7 @@ img {
 
 .counter .box-contain-one .box h4 {
   font-size: 1.5rem;
-  color: white;
+  color: black;
 }
 
 .counter .box-contain-one .box .span.one {
@@ -569,12 +585,12 @@ img {
 }
 
 .counter .box-contain-one .box .span.four {
-  color: black;
+  color: green;
 }
 
 .refer {
   padding: 5% 10%;
-  background-color: #3492ff;
+  background-color: #f1ec40;
   color: white;
 }
 
@@ -613,7 +629,7 @@ img {
   background-color: white;
   font-size: 1.8rem;
   padding: 0.5rem 1rem;
-  color: #3492ff;
+  color: #f1ec40;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
