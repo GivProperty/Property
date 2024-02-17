@@ -591,7 +591,6 @@ img {
 .refer {
   padding: 5% 10%;
   background-color: #f1ec40;
-  color: white;
 }
 
 @media (max-width: 500px) {
@@ -621,7 +620,6 @@ img {
 }
 
 .refer .heading p {
-  color: white;
   margin-bottom: 1.5rem;
 }
 

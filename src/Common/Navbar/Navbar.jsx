@@ -2,7 +2,7 @@ import { faBars, faMultiply } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-// import logo from "../../Assests/logo.svg";
+import logo from "../../Assests/logo/GIVPROPERTY-logos/Logo.png";
 import "./Navbar.css";
 
 function Navbar(props) {
@@ -33,9 +33,9 @@ function Navbar(props) {
         <div className="navbar">
           <div className="logo">
             <Link to={"/"}>
-              {/* <img src={logo} alt="" /> */}
-              <h3>GIV</h3>
-              <p>Global Iconic Ventures</p>
+              <img src={logo} alt="" />
+              {/* <h3>GIV</h3>
+              <p>Global Iconic Ventures</p> */}
             </Link>
           </div>
           <div className="lists">

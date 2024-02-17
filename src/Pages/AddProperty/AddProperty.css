@@ -94,7 +94,6 @@ img {
       align-self: flex-start;
   padding: 1rem 2rem;
   background-color: #f1ec40;
-  color: white;
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
@@ -109,6 +108,7 @@ img {
 }
 
 .addproperty .info form button:hover {
+  color: white;
   background-color: black;
 }
 /*# sourceMappingURL=AddProperty.css.map */
