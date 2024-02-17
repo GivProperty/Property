@@ -58,10 +58,13 @@ function Navbar(props) {
                   Services
                   <ul className={sublink ? "sublinks active" : "sublinks"}>
                     <li className="sublink">
-                      <Link>Rental Management</Link>
+                      <Link to={"/add-your-property"}>Rental Management</Link>
                     </li>
                     <li className="sublink">
-                      <Link>Property Management</Link>
+                      <Link to={"/add-your-property"}>Property Management</Link>
+                    </li>
+                    <li className="sublink">
+                      <Link to={"/add-your-property"}>Vendor Management</Link>
                     </li>
                   </ul>
                 </Link>
@@ -125,6 +128,9 @@ function Navbar(props) {
               </Link>
               <Link>
                 <li>Property Management</li>
+              </Link>
+              <Link>
+                <li>Vendor Management</li>
               </Link>
             </ul>
           </Link>

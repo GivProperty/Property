@@ -9,8 +9,8 @@ function Banner(props) {
         <div className="content">
           <h2>{props.title}</h2>
           <div className="buttons">
-            <Link>Add Property</Link>
-            <Link>Contact Us</Link>
+            <Link to={"/add-your-property"}>Add Property</Link>
+            <Link to={"/contact"}>Contact Us</Link>
           </div>
         </div>
       </div>

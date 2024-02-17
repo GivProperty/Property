@@ -54,9 +54,9 @@ function Owner(props) {
 
       <AboutH />
 
-      <div className="prepaid">
+      {/* <div className="prepaid">
         <h2>WE ACCEPT PRE-PAID RENTING (NACH FORM)!</h2>
-      </div>
+      </div> */}
 
       <CounterHome />
 
