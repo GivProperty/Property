@@ -87,7 +87,7 @@ function Propertyslide(props) {
           <SwiperSlide>
             <div className="swiper-slide slide" style={{ padding: 20 }}>
               <div className="image">
-                <Link to="/properties/1001">
+                <Link to="/properties/1002">
                   <img
                     loading="lazy"
                     src={require("../../Assests/Properties/Prestige White Meadows/6.jpeg")}
@@ -123,11 +123,11 @@ function Propertyslide(props) {
                       </div>
                     </div>
                     <p>
-                      A spacious home designed for families aspiring for a
-                      modern lifestyle, this Flat is available for affordable
-                      rent in Bengaluru. It is a 3 BHK Flat situated in
-                      Whitefield at a coveted location with well-developed
-                      infrastructure.
+                      The Flat is constructed inside project Prestige White
+                      Meadows. Families have access to various amenities such as
+                      Gym, Garden, Sports Facility, Swimming Pool, Intercom,
+                      Clubhouse, Community Hall. There is a provision for lift
+                      facility.
                     </p>
                   </div>
                 </Link>
@@ -138,18 +138,18 @@ function Propertyslide(props) {
           <SwiperSlide>
             <div className="swiper-slide slide" style={{ padding: 20 }}>
               <div className="image">
-                <Link to="/properties/1001">
+                <Link to="/properties/1003">
                   <img
                     loading="lazy"
-                    src={require("../../Assests/Properties/Assetz/4.jpeg")}
+                    src={require("../../Assests/Properties/Mantri Pinnacle/1.jpeg")}
                     alt=""
                   />
                 </Link>
               </div>
               <div className="content">
-                <Link to="/properties/1001">
+                <Link to="/properties/1003">
                   <div>
-                    <h3>Assestz Marq 2</h3>
+                    <h3>Mantri Pinnacle</h3>
                     <div className="amenity">
                       <div className="box">
                         <img
@@ -174,11 +174,11 @@ function Propertyslide(props) {
                       </div>
                     </div>
                     <p>
-                      A spacious home designed for families aspiring for a
-                      modern lifestyle, this Flat is available for affordable
-                      rent in Bengaluru. It is a 3 BHK Flat situated in
-                      Whitefield at a coveted location with well-developed
-                      infrastructure.
+                      This Flat can be a comfortable and affordable home for
+                      your family. It is a 3 BHK unit available on rent at
+                      Hulimavu in Bengaluru. This Flat comes with a plethora of
+                      amenities to meet your modern lifestyle needs. It is Semi
+                      Furnished.
                     </p>
                   </div>
                 </Link>
@@ -192,7 +192,7 @@ function Propertyslide(props) {
                 <Link to="/properties/1001">
                   <img
                     loading="lazy"
-                    src={require("../../Assests/Properties/Assetz/4.jpeg")}
+                    src={require("../../Assests/Properties/Kolte Patil Mirabilis/8.jpeg")}
                     alt=""
                   />
                 </Link>
@@ -200,7 +200,7 @@ function Propertyslide(props) {
               <div className="content">
                 <Link to="/properties/1001">
                   <div>
-                    <h3>Assestz Marq 2</h3>
+                    <h3>Kolte Patil Mirabilis</h3>
                     <div className="amenity">
                       <div className="box">
                         <img
@@ -225,11 +225,11 @@ function Propertyslide(props) {
                       </div>
                     </div>
                     <p>
-                      A spacious home designed for families aspiring for a
-                      modern lifestyle, this Flat is available for affordable
-                      rent in Bengaluru. It is a 3 BHK Flat situated in
-                      Whitefield at a coveted location with well-developed
-                      infrastructure.
+                      This Flat can be a comfortable and affordable home for
+                      your family. It is a 1 BHK unit available on rent at
+                      Horamavu in Bengaluru. This Flat comes with a plethora of
+                      amenities to meet your modern lifestyle needs. It is Semi
+                      Furnished.
                     </p>
                   </div>
                 </Link>

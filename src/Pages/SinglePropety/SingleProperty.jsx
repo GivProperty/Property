@@ -76,7 +76,7 @@ function SingleProperty(props) {
                           src={require("../../Assests/Amenities/bedroom.png")}
                           alt=""
                         />
-                        <p>3 Bedrooms</p>
+                        <p>{property?.bedroom} Bedrooms</p>
                       </div>
                       <div className="am-icon">
                         <img
