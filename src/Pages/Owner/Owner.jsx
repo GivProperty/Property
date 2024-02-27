@@ -1,3 +1,5 @@
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import ContactComp from "../../Common/ContactComp/ContactComp";
@@ -53,6 +55,39 @@ function Owner(props) {
       </div>
 
       <AboutH />
+
+      <div className="steps">
+        <div className="heading">
+          <h2>List your property for FREE in these 3 simple steps</h2>
+        </div>
+        <div className="content">
+          <div className="content-container">
+            <div className="box">
+              <div className="icon"></div>
+              <div className="info">
+                <h3>Share your Property Details</h3>
+                <p>Location, Photos, Videos & other details.</p>
+              </div>
+            </div>
+            <FontAwesomeIcon icon={faArrowDown} />
+            <div className="box">
+              <div className="icon"></div>
+              <div className="info">
+                <h3>Handover the Keys</h3>
+                <p>Post Property Inspection Handover the keys.</p>
+              </div>
+            </div>
+            <FontAwesomeIcon icon={faArrowDown} />
+            <div className="box">
+              <div className="icon"></div>
+              <div className="info">
+                <h3>Onboarding the Property</h3>
+                <p>Marketing Starts in all the Market Places.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* <div className="prepaid">
         <h2>WE ACCEPT PRE-PAID RENTING (NACH FORM)!</h2>
@@ -111,6 +146,10 @@ function Owner(props) {
           <h2>Benefits for Property Owners</h2>
         </div>
       </div> */}
+
+      <div className="invest">
+        <img src={require("../../Assests/Banners/Invest.jpeg")} alt="" />
+      </div>
 
       <Propertyslide />
 

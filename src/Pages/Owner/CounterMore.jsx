@@ -46,7 +46,7 @@ function CounterMore(props) {
           </div> */}
 
         <div id="count-up-section"></div>
-        <div className="box-contain-one">
+        <div className="box-contain">
           <div className="box">
             <CountUp
               className="span three"

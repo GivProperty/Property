@@ -6,51 +6,17 @@ import ImageGallery from "react-image-gallery";
 import "./SingleProperty.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import properties from "./Properties";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-
-const images = [
-  {
-    original: require("../../Assests/Properties/1/1.jpeg"),
-    thumbnail: require("../../Assests/Properties/1/1.jpeg"),
-  },
-  {
-    original: require("../../Assests/Properties/1/2.jpeg"),
-    thumbnail: require("../../Assests/Properties/1/2.jpeg"),
-  },
-  {
-    original: require("../../Assests/Properties/1/3.jpeg"),
-    thumbnail: require("../../Assests/Properties/1/3.jpeg"),
-  },
-  {
-    original: require("../../Assests/Properties/1/4.jpeg"),
-    thumbnail: require("../../Assests/Properties/1/4.jpeg"),
-  },
-  {
-    original: require("../../Assests/Properties/1/5.jpeg"),
-    thumbnail: require("../../Assests/Properties/1/5.jpeg"),
-  },
-  {
-    original: require("../../Assests/Properties/1/6.jpeg"),
-    thumbnail: require("../../Assests/Properties/1/6.jpeg"),
-  },
-  {
-    original: require("../../Assests/Properties/1/7.jpeg"),
-    thumbnail: require("../../Assests/Properties/1/7.jpeg"),
-  },
-  {
-    original: require("../../Assests/Properties/1/8.jpeg"),
-    thumbnail: require("../../Assests/Properties/1/8.jpeg"),
-  },
-];
+import { faBolt } from "@fortawesome/free-solid-svg-icons";
 
 function SingleProperty(props) {
   const { id } = useParams();
   const [property, setProperty] = useState(null);
+  const [furn, setFurni] = useState(true);
 
   useEffect(() => {
     const foundProperty = properties.find(
@@ -59,7 +25,19 @@ function SingleProperty(props) {
     setProperty(foundProperty);
   }, [id]);
 
-  console.log(property);
+  useEffect(() => {
+    const checkAllFalse = () => {
+      for (let key in property?.furnishing) {
+        if (property?.furnishing[key]) {
+          return setFurni(true); // If any key value is true, return false
+        }
+      }
+      return setFurni(false); // If all key values are false, return true
+    };
+    checkAllFalse();
+  }, [id, property]);
+
+  console.log(furn);
 
   return (
     <div>
@@ -67,143 +45,298 @@ function SingleProperty(props) {
       {property ? (
         <div className="singlePropertyWrapper">
           <div className="singleProperty">
-            <div className="heading">
-              <h2>3 BHK Fully Furnished Villa, Kadugodi, Bangalore</h2>
+            <div className="m-heading">
+              <h2>{property?.name}</h2>
+              <p>{property?.location}</p>
             </div>
 
             <div className="main-content">
               <div className="img-container">
-                <ImageGallery items={images} />
-              </div>
-              <div className="about-property">
-                <h3>About the Property</h3>
-                <p>
-                  This is a Fully Furnished, Villa type property located at
-                  Kadugodi, Bangalore at an affordable monthly rent of ₹ 50000/
-                </p>
-                <span className="amount">
-                  Price: <span className="sm">₹</span>50000/
-                  <span className="sm">month</span>
-                </span>
-                <Link to={`/properties/${id}/book-now`} className="visit">
-                  Want to Visit the Property?
-                </Link>
-                <div className="book-share">
-                  <Link to={`/properties/${id}/book-now`} className="book">
-                    Book Free Visit
-                  </Link>
-                  <button className="share">
-                    Share <FontAwesomeIcon icon={faWhatsapp} />
-                  </button>
-                </div>
+                <ImageGallery items={property?.images} />
               </div>
             </div>
 
-            <div className="amenities">
-              <div className="heading">
-                <h2>Property Amenities</h2>
-              </div>
-              <div className="content">
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Balconies.png")}
-                    alt=""
-                  />
-                  <p>No</p>
+            <div className="info-content">
+              <div className="info-card">
+                <div className="dets-card about">
+                  <div className="content">
+                    <h3>About</h3>
+                    <hr color="#eee" />
+                    <p>{property?.about}</p>
+                  </div>
                 </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Area.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Parking.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Maintainance.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Deposit.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Bachelor.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Meat.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Students.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Floor.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Terrace.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-                <div className="am-box">
-                  <p>Balconies</p>
-                  <img
-                    src={require("../../Assests/Amenities/Pets.png")}
-                    alt=""
-                  />
-                  <p>No</p>
-                </div>
-              </div>
-            </div>
 
-            <div className="prop-vid">
-              <div className="heading">
-                <h2>Property Location and Video</h2>
-              </div>
-              <div className="content">
-                <div className="video">
-                  <iframe
-                    title="Youtube"
-                    srcdoc="
+                <div className="dets-card overview">
+                  <div className="content">
+                    <h3>Overview</h3>
+                    <hr color="#eee" />
+                    <div className="am-icons">
+                      <div className="am-icon">
+                        <img
+                          src={require("../../Assests/Amenities/bedroom.png")}
+                          alt=""
+                        />
+                        <p>3 Bedrooms</p>
+                      </div>
+                      <div className="am-icon">
+                        <img
+                          src={require("../../Assests/Amenities/bathroom.png")}
+                          alt=""
+                        />
+                        <p>{property?.bathroom} Bathrooms</p>
+                      </div>
+                      <div className="am-icon">
+                        <img
+                          src={require("../../Assests/Amenities/area.png")}
+                          alt=""
+                        />
+                        <p>{property?.area} (sq.ft)</p>
+                      </div>
+                      <div className="am-icon">
+                        <img
+                          src={require("../../Assests/Amenities/calendar.png")}
+                          alt=""
+                        />
+                        <p>Construction Year: {2024 - property?.age}</p>
+                      </div>
+                      <div className="am-icon">
+                        <img
+                          src={require("../../Assests/Amenities/compass.png")}
+                          alt=""
+                        />
+                        <p>{property?.facing} Facing</p>
+                      </div>
+                      <div className="am-icon">
+                        <img
+                          src={require("../../Assests/Amenities/sofa.png")}
+                          alt=""
+                        />
+                        <p>{property?.furnished}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {furn && (
+                  <div className="dets-card furnishing">
+                    <div className="content">
+                      <h3>Furnishing</h3>
+                      <hr color="#eee" />
+                      <div className="am-icons">
+                        {property?.furnishing.intercom && (
+                          <div className="am-icon">
+                            <img
+                              src={require("../../Assests/Amenities/intercom.png")}
+                              alt=""
+                            />
+                            <p>Intercom</p>
+                          </div>
+                        )}
+                        {property?.furnishing.cupboard && (
+                          <div className="am-icon">
+                            <img
+                              src={require("../../Assests/Amenities/cupboard.png")}
+                              alt=""
+                            />
+                            <p>Cupboard</p>
+                          </div>
+                        )}
+                        {property?.furnishing.geyser && (
+                          <div className="am-icon">
+                            <img
+                              src={require("../../Assests/Amenities/water-boiler.png")}
+                              alt=""
+                            />
+                            <p>Geyser</p>
+                          </div>
+                        )}
+                        {property?.furnishing.CCTV && (
+                          <div className="am-icon">
+                            <img
+                              src={require("../../Assests/Amenities/security-camera.png")}
+                              alt=""
+                            />
+                            <p>CCTV</p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div className="dets-card amenity">
+                  <div className="content">
+                    <h3>Amenities</h3>
+                    <hr color="#eee" />
+                    <div className="am-icons">
+                      {property?.Amenities.pool && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/swimming-pool.png")}
+                            alt=""
+                          />
+                          <p>Pool</p>
+                        </div>
+                      )}
+                      {property?.Amenities.gym && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/gym.png")}
+                            alt=""
+                          />
+                          <p>Gym</p>
+                        </div>
+                      )}
+                      {property?.Amenities.lift && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/elevator.png")}
+                            alt=""
+                          />
+                          <p>Elevator</p>
+                        </div>
+                      )}
+                      {property?.Amenities.parking && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/parking.png")}
+                            alt=""
+                          />
+                          <p>Parking</p>
+                        </div>
+                      )}
+                      {property?.Amenities.powerBackup && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/electric-factory.png")}
+                            alt=""
+                          />
+                          <p>Power Backup</p>
+                        </div>
+                      )}
+                      {property?.Amenities.pet && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/pawprint.png")}
+                            alt=""
+                          />
+                          <p>Pets Allowed</p>
+                        </div>
+                      )}
+                      {property?.Amenities.garden && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/park.png")}
+                            alt=""
+                          />
+                          <p>Garden</p>
+                        </div>
+                      )}
+                      {property?.Amenities.sportsFacility && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/basketball-hoop.png")}
+                            alt=""
+                          />
+                          <p>Sports Facility</p>
+                        </div>
+                      )}
+                      {property?.Amenities.kidsArea && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/swing.png")}
+                            alt=""
+                          />
+                          <p>Kids Area</p>
+                        </div>
+                      )}
+                      {property?.Amenities.gasPipeline && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/water-pipe.png")}
+                            alt=""
+                          />
+                          <p>Gas Pipeline</p>
+                        </div>
+                      )}
+                      {property?.Amenities.waterSupply && (
+                        <div className="am-icon">
+                          <img
+                            src={require("../../Assests/Amenities/water-tap.png")}
+                            alt=""
+                          />
+                          <p>Water Supply</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="dets-card explore">
+                  <div className="content">
+                    <h3>Explore</h3>
+                    <hr color="#eee" />
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1375110731137!2d77.58056167512267!3d12.963051387351534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e0ed95b97b%3A0x6e7f373b9591dc5!2sExpress%20New%20City%20Complex%2C%20No.301%2C%203rd%20Floor%2C%20New%20City%20Expres%20Building%2C%2013%2C%20Narashimaraja%20Road%2C%2C%20Kumbaragundi%2C%20Kalasipalya%2C%20Bengaluru%2C%20Karnataka%20560002!5e0!3m2!1sen!2sin!4v1709024205363!5m2!1sen!2sin"
+                      allowFullScreen=""
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div className="dets-card rent">
+                  <div className="content">
+                    <h3>Rent & Deposit</h3>
+                    <hr color="#eee" />
+                    <div className="rent-list">
+                      <div className="list">
+                        <div className="list-heading">
+                          <h3>Monthly Rent</h3>
+                          <p>Pay to Owner directly</p>
+                        </div>
+                        <div className="amount">
+                          <h3>₹{property?.rent}</h3>
+                        </div>
+                      </div>
+                      <hr color="#fff" />
+                      <div className="list">
+                        <div className="list-heading">
+                          <h3>Security deposit</h3>
+                          <p>
+                            Pay online to Nestaway on behalf of owner. Owner
+                            will return the amount at the time of move-out.
+                          </p>
+                        </div>
+                        <div className="amount">
+                          <h3>₹{property?.deposit}</h3>
+                        </div>
+                      </div>
+                      <hr color="#fff" />
+                      <div className="list">
+                        <div className="list-heading">
+                          <h3>House Maintenance Fee</h3>
+                          <p>
+                            Nestaway charges a one time accommodation
+                            convenience fee of ₹52542. SGST of ₹4729 and CGST of
+                            ₹4729 applicable.
+                          </p>
+                        </div>
+                        <div className="amount">
+                          <h3>₹{property?.maintenance}</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="dets-card video">
+                  <div className="content">
+                    <h3>Video</h3>
+                    <hr color="#eee" />
+                    <div className="video">
+                      <iframe
+                        title="Youtube"
+                        srcDoc="
           <style>
               body, .full {
                   width: 100%;
@@ -234,17 +367,44 @@ function SingleProperty(props) {
               </svg>
           </a>
       "
-                    frameborder="0"
-                  ></iframe>
+                        frameBorder="0"
+                      ></iframe>
+                    </div>
+                  </div>
                 </div>
-                <div className="maps">
-                  <iframe
-                    className="map"
-                    title="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14676.076183382833!2d77.60700385227963!3d13.023555620349676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17fb66ca2d95%3A0xea8c3e0488bf6f40!2sASA%20Building%20Demolition%20Contractor%20Bangalore!5e0!3m2!1sen!2sin!4v1675286800879!5m2!1sen!2sin&zoom=9"
-                    allowFullScreen=""
-                    loading="lazy"
-                  ></iframe>
+              </div>
+              <div className="fixed-card">
+                <div className="amounts">
+                  <div className="rent">
+                    <h3>₹{property?.rent}</h3>
+                    <p>Rent/ month</p>
+                  </div>
+                  <hr />
+                  <div className="rent">
+                    <h3>₹{property?.deposit}</h3>
+                    <p>Deposit</p>
+                  </div>
+                </div>
+
+                <Link to={`/properties/${id}/book-now`} className="book">
+                  <FontAwesomeIcon icon={faBolt} />
+                  Book Now
+                </Link>
+
+                <div className="or">
+                  <h2>
+                    <span>OR</span>
+                  </h2>
+                </div>
+
+                <Link to={`/properties/${id}/book-now`} className="visit">
+                  Schedule a Visit
+                </Link>
+
+                <div className="visits">
+                  <p>Assisted & Free</p>
+                  <hr />
+                  <p>Reschedule Anytime</p>
                 </div>
               </div>
             </div>
@@ -279,6 +439,12 @@ function SingleProperty(props) {
                   <Link>View</Link>
                 </div>
               </div>
+            </div>
+
+            <div className="fixed-but">
+              <Link to={`/properties/${id}/book-now`} className="fixed-book">
+                <FontAwesomeIcon icon={faBolt} /> Book Now
+              </Link>
             </div>
           </div>
         </div>

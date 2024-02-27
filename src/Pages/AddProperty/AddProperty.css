@@ -35,18 +35,27 @@ img {
   }
 }
 
+.addproperty .info {
+  background-color: #ffd400;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+@media (max-width: 700px) {
+  .addproperty .info {
+    padding: 1rem 1.5rem;
+  }
+}
+
 .addproperty .info h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 @media (max-width: 500px) {
   .addproperty .info h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-}
-
-.addproperty .info p {
-  margin-top: 1rem;
 }
 
 @media (max-width: 500px) {
@@ -55,9 +64,25 @@ img {
   }
 }
 
-.addproperty .info form {
+.addproperty .form {
   margin-top: 2rem;
-  max-width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.addproperty .form .main {
+  width: 60%;
+}
+
+@media (max-width: 1000px) {
+  .addproperty .form .main {
+    width: 100%;
+  }
+}
+
+.addproperty .form .main form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,50 +90,106 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
-.addproperty .info form input,
-.addproperty .info form textarea {
-  padding: 1rem;
-  outline: none;
-  border: solid 1px #e3e3e3;
-  background-color: #fbfbfb;
-  border-radius: 5px;
+.addproperty .form .main form label {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+  .addproperty .form .main form label {
+    font-size: 1rem;
+  }
+}
+
+.addproperty .form .main form input {
+  padding: 0.5rem 1rem;
   font-size: 1rem;
+  outline: none;
 }
 
-@media (max-width: 500px) {
-  .addproperty .info form input,
-  .addproperty .info form textarea {
+@media (max-width: 700px) {
+  .addproperty .form .main form input {
     font-size: 0.8rem;
   }
 }
 
-.addproperty .info form textarea {
-  height: 8rem;
-}
-
-.addproperty .info form button {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  padding: 1rem 2rem;
-  background-color: #f1ec40;
-  border: none;
-  font-size: 1.2rem;
+.addproperty .form .main form .submit {
+  background-color: black;
+  color: white;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
-@media (max-width: 500px) {
-  .addproperty .info form button {
-    padding: 0.6rem 1.2rem;
+.addproperty .form .main form .prop-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.addproperty .form .main form .prop-type .pr-ty {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: white;
+  border: #ffd400 2px solid;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.addproperty .form .main form .prop-type .pr-ty:hover {
+  background-color: #ffd400;
+}
+
+.addproperty .form .main form .prop-type .pr-ty.active {
+  background-color: #ffd400;
+}
+
+.addproperty .form .side {
+  padding: 1rem 2rem;
+  background-color: #fafafa;
+  width: 40%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+@media (max-width: 1000px) {
+  .addproperty .form .side {
+    display: none;
   }
 }
 
-.addproperty .info form button:hover {
-  color: white;
-  background-color: black;
+.addproperty .form .side .heading {
+  margin-bottom: 2rem;
+}
+
+.addproperty .form .side .box-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.addproperty .form .side .box-contain .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.addproperty .form .side .box-contain .box svg {
+  font-size: 2rem;
 }
 /*# sourceMappingURL=AddProperty.css.map */

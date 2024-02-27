@@ -25,32 +25,38 @@ img {
   width: 100%;
 }
 
-.singlePropertyWrapper {
+.singlePropertyWrapper .singleProperty .m-heading {
   padding: 5% 10%;
 }
 
 @media (max-width: 500px) {
-  .singlePropertyWrapper {
+  .singlePropertyWrapper .singleProperty .m-heading {
     padding: 5% 5%;
   }
 }
 
-.singlePropertyWrapper .singleProperty .heading h2 {
+.singlePropertyWrapper .singleProperty .m-heading h2 {
   font-size: 2rem;
-  margin-bottom: 2.2rem;
 }
 
 @media (max-width: 500px) {
-  .singlePropertyWrapper .singleProperty .heading h2 {
+  .singlePropertyWrapper .singleProperty .m-heading h2 {
     font-size: 1.5rem;
   }
 }
 
 .singlePropertyWrapper .singleProperty .main-content {
+  padding: 0% 10% 5% 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .main-content {
+    padding: 0% 5% 5% 5%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -63,13 +69,18 @@ img {
 }
 
 .singlePropertyWrapper .singleProperty .main-content .img-container {
-  width: 65%;
+  width: 100%;
 }
 
 @media (max-width: 1000px) {
   .singlePropertyWrapper .singleProperty .main-content .img-container {
     width: 100%;
   }
+}
+
+.singlePropertyWrapper .singleProperty .main-content .img-container img {
+  width: 100%;
+  height: 100%;
 }
 
 .singlePropertyWrapper .singleProperty .main-content .about-property {
@@ -81,7 +92,6 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
-  width: 35%;
 }
 
 @media (max-width: 1000px) {
@@ -116,7 +126,7 @@ img {
   border: none;
   font-size: 1.2rem;
   background-color: white;
-  color: #f1ec40;
+  color: #ffd400;
   cursor: pointer;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -128,7 +138,7 @@ img {
   border: none;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
-  background-color: #f1ec40;
+  background-color: #ffd400;
   color: white;
   cursor: pointer;
   -webkit-transition: all ease 0.5s;
@@ -172,134 +182,283 @@ img {
   color: white;
 }
 
-.singlePropertyWrapper .singleProperty .amenities {
-  margin-top: 2rem;
-}
-
-.singlePropertyWrapper .singleProperty .amenities .heading {
-  text-align: center;
-}
-
-.singlePropertyWrapper .singleProperty .amenities .heading h2 {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
+.singlePropertyWrapper .singleProperty .info-content {
+  padding: 5% 5%;
+  background-color: rgba(244, 244, 244, 0.866);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
 }
 
 @media (max-width: 500px) {
-  .singlePropertyWrapper .singleProperty .amenities .heading h2 {
-    font-size: 1.5rem;
+  .singlePropertyWrapper .singleProperty .info-content {
+    padding: 5% 0%;
   }
 }
 
-.singlePropertyWrapper .singleProperty .amenities .content {
-  padding: 0% 20%;
-  grid-gap: 2rem;
-  display: -ms-grid;
-  display: grid;
-  gap: 5rem;
-  -ms-grid-columns: (minmax(3rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+.singlePropertyWrapper .singleProperty .info-content .info-card {
+  width: 64%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
 }
 
-@media (max-width: 500px) {
-  .singlePropertyWrapper .singleProperty .amenities .content {
-    padding: 0% 5%;
+@media (max-width: 850px) {
+  .singlePropertyWrapper .singleProperty .info-content .info-card {
+    width: 100%;
   }
 }
 
-.singlePropertyWrapper .singleProperty .amenities .content .am-box {
+@media (max-width: 600px) {
+  .singlePropertyWrapper .singleProperty .info-content .info-card h3 {
+    font-size: 1rem;
+  }
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card {
+  padding: 2rem 1rem;
+  background-color: white;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card.about p {
+  height: 8rem;
+  overflow-y: scroll;
+  text-align: justify;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .am-icons {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .am-icons .am-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .am-icons .am-icon img {
+  width: 3rem;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .content .rent-list {
+  padding: 1rem 1rem;
+  background-color: rgba(244, 244, 244, 0.512);
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .content .rent-list .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .content hr {
+  margin: 0.5rem 0;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .content .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .content .icons .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.3rem;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .content .icons .icon svg {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.singlePropertyWrapper .singleProperty .info-content .info-card .dets-card .content iframe {
+  border: none;
+  border-radius: 2rem;
+  width: 100%;
+  height: 15rem;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .fixed-card {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 34%;
+  background-color: white;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2rem;
 }
 
-.singlePropertyWrapper .singleProperty .prop-vid {
-  margin-top: 2rem;
-}
-
-.singlePropertyWrapper .singleProperty .prop-vid .heading {
-  text-align: center;
-}
-
-.singlePropertyWrapper .singleProperty .prop-vid .heading h2 {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 500px) {
-  .singlePropertyWrapper .singleProperty .prop-vid .heading h2 {
-    font-size: 1.5rem;
+@media (max-width: 850px) {
+  .singlePropertyWrapper .singleProperty .info-content .fixed-card {
+    display: none;
   }
 }
 
-.singlePropertyWrapper .singleProperty .prop-vid .content {
+.singlePropertyWrapper .singleProperty .info-content .fixed-card .amounts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .fixed-card .book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  background-color: #ffd400;
+  border-radius: 3rem;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .fixed-card .book:hover {
+  background-color: black;
+  color: white;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .fixed-card .or h2 {
   width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
 }
 
-@media (max-width: 800px) {
-  .singlePropertyWrapper .singleProperty .prop-vid .content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+.singlePropertyWrapper .singleProperty .info-content .fixed-card .or h2 span {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .fixed-card .visit {
+  text-align: center;
+  border-radius: 3rem;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  background-color: #eee;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .fixed-card .visit:hover {
+  background-color: black;
+  color: white;
+}
+
+.singlePropertyWrapper .singleProperty .info-content .fixed-card .visits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.singlePropertyWrapper .singleProperty .fixed-but {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 850px) {
+  .singlePropertyWrapper .singleProperty .fixed-but {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
-.singlePropertyWrapper .singleProperty .prop-vid .content .video {
-  width: 50%;
+.singlePropertyWrapper .singleProperty .fixed-but .fixed-book {
+  position: fixed;
+  bottom: 10px;
+  z-index: 100;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  background-color: #ffd400;
+  border-radius: 3rem;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
 }
 
-@media (max-width: 800px) {
-  .singlePropertyWrapper .singleProperty .prop-vid .content .video {
-    width: 100%;
-  }
-}
-
-.singlePropertyWrapper .singleProperty .prop-vid .content .video iframe {
-  width: 100%;
-  height: 25rem;
-}
-
-@media (max-width: 500px) {
-  .singlePropertyWrapper .singleProperty .prop-vid .content .video iframe {
-    height: 18rem;
-  }
-}
-
-.singlePropertyWrapper .singleProperty .prop-vid .content .maps {
-  width: 50%;
-}
-
-@media (max-width: 800px) {
-  .singlePropertyWrapper .singleProperty .prop-vid .content .maps {
-    width: 100%;
-  }
-}
-
-.singlePropertyWrapper .singleProperty .prop-vid .content .maps iframe {
-  width: 100%;
-  height: 25rem;
-}
-
-@media (max-width: 500px) {
-  .singlePropertyWrapper .singleProperty .prop-vid .content .maps iframe {
-    height: 18rem;
-  }
+.singlePropertyWrapper .singleProperty .fixed-but .fixed-book:hover {
+  background-color: black;
+  color: white;
 }
 
 .singlePropertyWrapper .singleProperty .similar {
-  margin-top: 2rem;
+  padding: 5% 10%;
+}
+
+@media (max-width: 500px) {
+  .singlePropertyWrapper .singleProperty .similar {
+    padding: 5% 5%;
+  }
 }
 
 .singlePropertyWrapper .singleProperty .similar .heading {
@@ -344,13 +503,13 @@ img {
 }
 
 .singlePropertyWrapper .singleProperty .similar .container .box a {
-  border: #f1ec40 2px solid;
+  border: #ffd400 2px solid;
   width: 100%;
   font-size: 1.5rem;
 }
 
 .singlePropertyWrapper .singleProperty .similar .container .box a:hover {
-  background-color: #f1ec40;
+  background-color: #ffd400;
   color: white;
 }
 /*# sourceMappingURL=SingleProperty.css.map */

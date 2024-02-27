@@ -61,9 +61,7 @@ function ContactComp(props) {
           <div className="content">
             <div className="maps">
               <iframe
-                className="map"
-                title="map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14676.076183382833!2d77.60700385227963!3d13.023555620349676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17fb66ca2d95%3A0xea8c3e0488bf6f40!2sASA%20Building%20Demolition%20Contractor%20Bangalore!5e0!3m2!1sen!2sin!4v1675286800879!5m2!1sen!2sin&zoom=9"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1375110731137!2d77.58056167512267!3d12.963051387351534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e0ed95b97b%3A0x6e7f373b9591dc5!2sExpress%20New%20City%20Complex%2C%20No.301%2C%203rd%20Floor%2C%20New%20City%20Expres%20Building%2C%2013%2C%20Narashimaraja%20Road%2C%2C%20Kumbaragundi%2C%20Kalasipalya%2C%20Bengaluru%2C%20Karnataka%20560002!5e0!3m2!1sen!2sin!4v1709024205363!5m2!1sen!2sin"
                 allowFullScreen=""
                 loading="lazy"
               ></iframe>

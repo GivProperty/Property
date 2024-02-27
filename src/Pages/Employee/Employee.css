@@ -41,7 +41,7 @@ img {
 
 .emp .sidebar .heading {
   text-align: center;
-  color: #f1ec40;
+  color: #ffd400;
   border-bottom: 4px solid #eee;
   padding: 1rem 0;
 }
@@ -77,19 +77,19 @@ img {
 }
 
 .emp .sidebar .main-lists .main-list .list:hover {
-  color: #f1ec40;
+  color: #ffd400;
 }
 
 .emp .sidebar .main-lists .main-list .list:hover .icon {
-  background-color: #f1ec40;
+  background-color: #ffd400;
 }
 
 .emp .sidebar .main-lists .main-list .list.active {
-  color: #f1ec40;
+  color: #ffd400;
 }
 
 .emp .sidebar .main-lists .main-list .list.active .icon {
-  background-color: #f1ec40;
+  background-color: #ffd400;
 }
 
 .emp .sidebar .main-lists .main-list .list .icon {

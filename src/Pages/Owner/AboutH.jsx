@@ -46,7 +46,7 @@ function AboutH(props) {
 
         <div className="qua-services">
           <div className="heading">
-            <h2>Our Quality Services</h2>
+            <h2>OUR QUALITY SERVICES</h2>
           </div>
           <div className="content">
             <div className="content-container">

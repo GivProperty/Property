@@ -41,7 +41,7 @@ img {
 
 .tenant-form .heading h2 {
   font-size: 2rem;
-  color: #f1ec40;
+  color: #ffd400;
 }
 
 @media (max-width: 500px) {
@@ -90,8 +90,20 @@ img {
   min-width: 6rem;
 }
 
+@media (max-width: 500px) {
+  .tenant-form form .contact .contact-form .input .label {
+    min-width: 5rem;
+  }
+}
+
 .tenant-form form .contact .contact-form .input .label span {
   font-size: 1.3rem;
+}
+
+@media (max-width: 500px) {
+  .tenant-form form .contact .contact-form .input .label span {
+    font-size: 1rem;
+  }
 }
 
 .tenant-form form .contact .contact-form .input input {
@@ -113,7 +125,7 @@ img {
 .tenant-form form .submit {
   margin-top: 1rem;
   padding: 1rem 2rem;
-  background-color: #f1ec40;
+  background-color: #ffd400;
   color: white;
   border: none;
   font-size: 1.2rem;

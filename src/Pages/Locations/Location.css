@@ -79,7 +79,7 @@ img {
   outline: none;
   font-size: 1.5rem;
   width: 100%;
-  border: #f1ec40 2px solid;
+  border: #ffd400 2px solid;
   padding: 0.5rem;
   width: 100%;
 }
@@ -152,7 +152,7 @@ img {
 }
 
 .locations .content .loc .loc-box:hover {
-  color: #f1ec40;
+  color: #ffd400;
 }
 
 .locations .content .loc .loc-box svg {

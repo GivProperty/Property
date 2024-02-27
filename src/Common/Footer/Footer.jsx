@@ -49,8 +49,10 @@ function Footer(props) {
           <div className="top-container">
             <h3>Reach Us Now</h3>
             <div className="links">
-              <Link>info@abc.com</Link>
-              <a href="tel:9004843980">+91 9004843980</a>
+              <Link>info@givproperty.com</Link>
+              <Link>help@givproperty.com</Link>
+
+              <a href="tel:9004843980">+91 7892858540</a>
             </div>
           </div>
         </div>

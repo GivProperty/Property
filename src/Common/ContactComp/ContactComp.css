@@ -74,7 +74,7 @@ img {
 
 .contact-comp-wrapper .contact-comp .heading h3 {
   font-size: 2rem;
-  color: #f1ec40;
+  color: #ffd400;
 }
 
 @media (max-width: 700px) {
@@ -153,7 +153,7 @@ img {
   -ms-flex-item-align: start;
       align-self: flex-start;
   padding: 1rem 2rem;
-  background-color: #f1ec40;
+  background-color: #ffd400;
   color: black;
   border: none;
   font-size: 1.2rem;
@@ -171,7 +171,7 @@ img {
 
 .contact-comp-wrapper .contact-comp .content .form form button:hover {
   background-color: black;
-  color: #f1ec40;
+  color: #ffd400;
 }
 
 .contact-comp-wrapper .contact-comp .content .maps {
