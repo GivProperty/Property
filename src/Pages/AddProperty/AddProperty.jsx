@@ -2,30 +2,28 @@ import {
   faHandHoldingDollar,
   faHouse,
   faNoteSticky,
-  faPaperclip,
-  faPaperPlane,
   faUmbrella,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "../../Common/axios";
 import React, { useState } from "react";
 import Banner from "../../Common/Banner/Banner";
-// import ContactComp from "../../Common/ContactComp/ContactComp";
 import Footer from "../../Common/Footer/Footer";
 import Navbar from "../../Common/Navbar/Navbar";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 import "./AddProperty.css";
 
 function AddProperty(props) {
   const [loading, setLoading] = useState(false);
   const [property, setProperty] = useState({
     name: "",
-    propertyName: "",
-    bedroomsCount: "",
-    locatedCity: "",
-    propertyAddress: "",
+    city: "",
+    address: "",
     phone: "",
   });
   const [propertyType, setPropertyType] = useState("");
-  const [roomCount, setRoomCount] = useState("");
+  const [bhk, setBhk] = useState("");
 
   function handleStateChange(e) {
     setProperty((prevState) => ({
@@ -34,11 +32,35 @@ function AddProperty(props) {
     }));
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     property.propertyType = propertyType;
-    property.roomCount = roomCount;
-    console.log(property);
+    property.bhk = bhk;
+    setLoading(true);
+
+    try {
+      await axios("http://localhost:8000/api/user/property", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        data: property,
+      })
+        .then((res) => {
+          console.log(res);
+          if (res.status === 200) {
+            console.log(res.data);
+            setLoading(false);
+          } else if (res.status === 402) {
+            console.log("Message failed to send");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -96,32 +118,32 @@ function AddProperty(props) {
                 <label htmlFor="">No of bedrooms in the property</label>
                 <div className="prop-type">
                   <span
-                    className={roomCount === "1" ? "pr-ty active" : "pr-ty"}
-                    onClick={() => setRoomCount("1")}
+                    className={bhk === "1" ? "pr-ty active" : "pr-ty"}
+                    onClick={() => setBhk("1")}
                   >
                     1
                   </span>
                   <span
-                    className={roomCount === "2" ? "pr-ty active" : "pr-ty"}
-                    onClick={() => setRoomCount("2")}
+                    className={bhk === "2" ? "pr-ty active" : "pr-ty"}
+                    onClick={() => setBhk("2")}
                   >
                     2
                   </span>
                   <span
-                    className={roomCount === "3" ? "pr-ty active" : "pr-ty"}
-                    onClick={() => setRoomCount("3")}
+                    className={bhk === "3" ? "pr-ty active" : "pr-ty"}
+                    onClick={() => setBhk("3")}
                   >
                     3
                   </span>
                   <span
-                    className={roomCount === "4" ? "pr-ty active" : "pr-ty"}
-                    onClick={() => setRoomCount("4")}
+                    className={bhk === "4" ? "pr-ty active" : "pr-ty"}
+                    onClick={() => setBhk("4")}
                   >
                     4
                   </span>
                   <span
-                    className={roomCount === "4+" ? "pr-ty active" : "pr-ty"}
-                    onClick={() => setRoomCount("4+")}
+                    className={bhk === "4+" ? "pr-ty active" : "pr-ty"}
+                    onClick={() => setBhk("4+")}
                   >
                     4+
                   </span>
@@ -131,8 +153,8 @@ function AddProperty(props) {
                   type="text"
                   placeholder="Enter the Located City"
                   onChange={handleStateChange}
-                  value={property.locatedCity}
-                  name="locatedCity"
+                  value={property.city}
+                  name="city"
                   id="locatedCity"
                 />
                 <label htmlFor="propertyAddress">Property Address</label>
@@ -140,8 +162,8 @@ function AddProperty(props) {
                   type="text"
                   placeholder="Enter the Property Address"
                   onChange={handleStateChange}
-                  value={property.propertyAddress}
-                  name="propertyAddress"
+                  value={property.address}
+                  name="address"
                   id="propertyAddress"
                 />
                 <label htmlFor="phone">Phone Number</label>
@@ -153,11 +175,17 @@ function AddProperty(props) {
                   name="phone"
                   id="phone"
                 />
-                <input
-                  onClick={handleSubmit}
-                  type="submit"
-                  className="submit"
-                />
+                {loading ? (
+                  <Box sx={{ display: "flex" }}>
+                    <CircularProgress />
+                  </Box>
+                ) : (
+                  <input
+                    onClick={handleSubmit}
+                    type="submit"
+                    className="submit"
+                  />
+                )}
               </form>
             </div>
             <div className="side">

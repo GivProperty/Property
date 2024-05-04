@@ -19,7 +19,7 @@ function ContactComp(props) {
     console.log("You're good!");
 
     try {
-      await axios("http://localhost:8000/createUser", {
+      await axios("http://localhost:8000/api/user/enquiry", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

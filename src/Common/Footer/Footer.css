@@ -146,4 +146,56 @@ img {
   background-color: #2b6cb0;
   color: white;
 }
+
+.fixed-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+@media (max-width: 700px) {
+  .fixed-icons {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+.fixed-icons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fixed-icons a svg {
+  font-size: 2rem;
+  border-radius: 5px;
+}
+
+.fixed-icons a .whatsapp-icon {
+  background-color: #25d365;
+  color: white;
+  font-size: 2.4rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.fixed-icons a .phone-icon {
+  background-color: #045ad2;
+  color: white;
+  padding: 0.7rem;
+}
 /*# sourceMappingURL=Footer.css.map */

@@ -92,3 +92,42 @@
     }
   }
 }
+
+.fixed-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  @media (max-width: 700px) {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      font-size: 2rem;
+      border-radius: 5px;
+    }
+
+    .whatsapp-icon {
+      background-color: #25d365;
+      color: white;
+      font-size: 2.4rem;
+      padding: 0.5rem 0.7rem;
+    }
+
+    .phone-icon {
+      background-color: #045ad2;
+      color: white;
+      padding: 0.7rem;
+    }
+  }
+}

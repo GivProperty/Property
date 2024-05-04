@@ -1,4 +1,4 @@
-import { faBars, faMultiply } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMultiply, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -38,7 +38,12 @@ function Navbar(props) {
               <p>Global Iconic Ventures</p> */}
             </Link>
           </div>
+
           <div className="lists">
+            <a className="nav-call" href="tel:9900660506">
+              <FontAwesomeIcon className="nav-icon-phone" icon={faPhone} />
+              Contact Us +91 9900 660506
+            </a>
             <ul className={active !== "/" ? "list" : "list home"}>
               <li>
                 <Link

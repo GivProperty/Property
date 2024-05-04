@@ -51,7 +51,55 @@
       }
     }
 
+    .nav-call {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: white;
+      background-color: #045ad2;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      font-size: 1.3rem;
+      @media (max-width: 700px) {
+        font-size: 1rem;
+      }
+
+      .nav-icon-phone {
+        font-size: 1.3rem;
+        @media (max-width: 700px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
     .lists {
+      .nav-call {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: white;
+        background-color: #045ad2;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        @media (max-width: 700px) {
+          font-size: 1rem;
+        }
+
+        svg {
+          color: white;
+          display: flex;
+          font-size: 1.3rem;
+          @media (max-width: 700px) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       .list {
         margin-right: 4rem;
         list-style-type: none;

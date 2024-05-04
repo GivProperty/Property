@@ -8,6 +8,7 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function Footer(props) {
   return (
@@ -52,7 +53,7 @@ function Footer(props) {
               <Link>info@givproperty.com</Link>
               <Link>help@givproperty.com</Link>
 
-              <a href="tel:9004843980">+91 7892858540</a>
+              <a href="tel:9900660506">+91 9900660506</a>
             </div>
           </div>
         </div>
@@ -69,6 +70,14 @@ function Footer(props) {
             <h3>© 2024 Company. All Rights Reserved</h3>
           </div>
         </div>
+      </div>
+      <div className="fixed-icons">
+        <a href="https://wa.me/9900660506" className="whatsapp">
+          <FontAwesomeIcon className="whatsapp-icon" icon={faWhatsapp} />
+        </a>
+        <a href="tel:9900660506" className="phone">
+          <FontAwesomeIcon className="phone-icon" icon={faPhone} />
+        </a>
       </div>
     </div>
   );

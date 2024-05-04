@@ -89,6 +89,83 @@ img {
   margin-top: -10px;
 }
 
+.navbar-wrapper .navbar .nav-call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  color: white;
+  background-color: #045ad2;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+  .navbar-wrapper .navbar .nav-call {
+    font-size: 1rem;
+  }
+}
+
+.navbar-wrapper .navbar .nav-call .nav-icon-phone {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+  .navbar-wrapper .navbar .nav-call .nav-icon-phone {
+    font-size: 1rem;
+  }
+}
+
+.navbar-wrapper .navbar .lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.navbar-wrapper .navbar .lists .nav-call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  color: white;
+  background-color: #045ad2;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .navbar-wrapper .navbar .lists .nav-call {
+    font-size: 1rem;
+  }
+}
+
+.navbar-wrapper .navbar .lists .nav-call svg {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+  .navbar-wrapper .navbar .lists .nav-call svg {
+    font-size: 1rem;
+  }
+}
+
 .navbar-wrapper .navbar .lists .list {
   margin-right: 4rem;
   list-style-type: none;
